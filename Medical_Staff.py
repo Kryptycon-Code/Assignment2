@@ -1,4 +1,9 @@
 from abc import ABC, abstractmethod
+"""
+Abstract Method
+"""
+
+Staff = []
 
 class Medical_Staff(ABC):
     @abstractmethod
@@ -40,19 +45,19 @@ class Medical_Staff(ABC):
     def Add_Booking(self, Book):
         pass
 
+"""
+Staff
+"""
 class GP(Medical_Staff):
     def __init__(self):
         pass
         
-    @abstractmethod
     def Staff_Name(self):
         pass
         
-    @abstractmethod
     def Job_Description(self):
         pass
         
-    @abstractmethod
     def Booking_list(self):
         pass
 
@@ -63,15 +68,12 @@ class Nurse(Medical_Staff):
     def __init__(self):
         pass
         
-    @abstractmethod
     def Staff_Name(self):
         pass
         
-    @abstractmethod
     def Job_Description(self):
         pass
         
-    @abstractmethod
     def Booking_list(self):
         pass
 
@@ -82,15 +84,12 @@ class Psychologist(Medical_Staff):
     def __init__(self):
         pass
         
-    @abstractmethod
     def Staff_Name(self):
         pass
         
-    @abstractmethod
     def Job_Description(self):
         pass
         
-    @abstractmethod
     def Booking_list(self):
         pass
 
@@ -98,7 +97,9 @@ class Psychologist(Medical_Staff):
         pass
 
 
-
+"""
+Appointment Below
+"""
 
 
 # class Appointment(ABC):
@@ -158,4 +159,5 @@ class Psychologist(Medical_Staff):
 #     def Vaccine_Type(self):
 
 #         pass
+
 
