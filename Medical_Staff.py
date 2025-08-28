@@ -1,16 +1,18 @@
 from abc import ABC, abstractmethod
 
 class Medical_Staff(ABC):
+    @abstractmethod
     def Staff_Name(self):
         pass
-    
+        
+    @abstractmethod
     def Job_Description(self):
         pass
-    
+        
+    @abstractmethod
     def Booking_list(self):
         pass
     
-    @abstractmethod
     def Get_Daily_Capacity(self):
         pass
 
@@ -102,4 +104,5 @@ class GP(Medical_Staff):
 #         return self.AppointmentType
     
 #     def Vaccine_Type(self):
+
 #         pass
