@@ -43,7 +43,59 @@ class Medical_Staff(ABC):
 class GP(Medical_Staff):
     def __init__(self):
         pass
+        
+    @abstractmethod
+    def Staff_Name(self):
+        pass
+        
+    @abstractmethod
+    def Job_Description(self):
+        pass
+        
+    @abstractmethod
+    def Booking_list(self):
+        pass
 
+    def __str__(self):
+        pass
+   
+class Nurse(Medical_Staff):
+    def __init__(self):
+        pass
+        
+    @abstractmethod
+    def Staff_Name(self):
+        pass
+        
+    @abstractmethod
+    def Job_Description(self):
+        pass
+        
+    @abstractmethod
+    def Booking_list(self):
+        pass
+
+    def __str__(self):
+        pass
+
+class Psychologist(Medical_Staff):
+    def __init__(self):
+        pass
+        
+    @abstractmethod
+    def Staff_Name(self):
+        pass
+        
+    @abstractmethod
+    def Job_Description(self):
+        pass
+        
+    @abstractmethod
+    def Booking_list(self):
+        pass
+
+    def __str__(self):
+        pass
 
 
 
@@ -106,3 +158,4 @@ class GP(Medical_Staff):
 #     def Vaccine_Type(self):
 
 #         pass
+
