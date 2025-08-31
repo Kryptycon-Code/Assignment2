@@ -32,15 +32,15 @@ StaffList = [
 #         pass
 
 class Start_Booking(Booking):
-    def __init__(self, StaffName, Date, Appointment, StartTime, EndTime):
-        self.Staff_Name = StaffName
-        self.Date = Date
-        self.Appointment = Appointment
-        self.Start_Time = StartTime
-        self.End_Time = EndTime
+    def __init__(self, staff_name, date, appointment, start_time, end_time):
+        self._staff_name = staff_name
+        self._date = date
+        self._appointment = appointment
+        self._start_time = start_time
+        self._end_time = end_time
 
-    def Set_Date(self):
-        pass 
+    def Set_Date(self, set_date):
+        self._date = set_date
 
     """
     Sets the date of the booking
@@ -60,7 +60,7 @@ class Start_Booking(Booking):
     Changes the appointment type(the medical staff like nurse, GP or psychologist)
     """
 
-    def Set_Staff(self, New_Staff):
+    def Set_Staff(self, set_staff):
         pass
 
     """
