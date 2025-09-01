@@ -1,29 +1,13 @@
 from abc import ABC, abstractmethod
 
 class Appointment(ABC):
-    @property
-    @abstractmethod
-    def client_name(self):
-        pass
 
-    @property
-    @abstractmethod
-    def contact_number(self):
-        pass
-    
-    @property
-    @abstractmethod
-    def appointment_type(self):
-        pass
-
-class GPAppointment(Appointment):
-    def __init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name, mode):
+    def __init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name, duration):
         self._type_of_appointment = type_of_appointment
         self._reason_for_appointment = reason_for_appointment
         self._contact_number = contact_number
         self._client_name = client_name
-        self._mode = mode
-        self._duration = self._calculate_duration_with_mode()
+        self._duration = duration
 
 
     @property
@@ -54,6 +38,37 @@ class GPAppointment(Appointment):
     def client_name(self, new_client_name):
         self._client_name = new_client_name
 
+    @property
+    def duration(self):
+        return self._duration
+
+    @duration.setter
+    def duration(self, changed_value):
+        self._duration = changed_value
+    
+    # @property
+    # @abstractmethod
+    # def client_name(self):
+    #     pass
+
+    # @property
+    # @abstractmethod
+    # def contact_number(self):
+    #     pass
+    
+    # @property
+    # @abstractmethod
+    # def appointment_type(self):
+    #     pass
+
+class GPAppointment(Appointment):
+
+    def __init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name, mode):
+
+        self._mode = mode
+        self._duration = self._calculate_duration_with_mode()
+        super().__init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name, mode)
+
 
     #-----------Duration Section------------------
 
@@ -66,17 +81,19 @@ class GPAppointment(Appointment):
         self._mode = change_mode
         self._duration = self._calculate_duration_with_mode()
 
-    @property
-    def duration(self):
-        return self._duration
-
-    @duration.setter
-    def duration(self, changed_value):
-        self._duration = changed_value
-
     #calculating the duration depending witht he mode
     def _calculate_duration_with_mode(self):
         if self._mode in ("Telehealth" or "Standard"):
             return 15
         elif self._mode == "Long":
             return 60
+
+class NurseAppointment(Appointment):
+    def __init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name):
+        super().__init__(self, type_of_appointment, reason_for_appointment, contact_number, client_name)
+
+    def
+
+    
+
+

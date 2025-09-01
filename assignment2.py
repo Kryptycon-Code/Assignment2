@@ -48,7 +48,7 @@ class GP(Medical_Staff):
     
     
     
-class GPAppointment:
+class GPAppointment(Appointment):
     def __init__(self, TypeOfAppointment, ReasonOfAppointment):
         self.AppointmentType = TypeOfAppointment
         self.ReasonForAppointment = ReasonOfAppointment
